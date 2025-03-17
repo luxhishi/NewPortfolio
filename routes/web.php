@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\WelcomeController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\PageController;
+use App\Http\Controllers\FeatureController;
 
 /*
 |--------------------------------------------------------------------------
@@ -62,3 +63,5 @@ Route::get('/', [PageController::class, 'landing'])->name('landing'); //homepage
 Route::get('/home', [PageController::class, 'home'])->name('home'); //homepage
 Route::get('/skills', [PageController::class, 'skills'])->name('skills'); //skillspage
 Route::get('/gallery', [PageController::class, 'gallery'])->name('gallery'); //gallerypage
+
+Route::get('/features', [FeatureController::class, 'index']);

@@ -31,9 +31,6 @@
             height: 100%;
             background: url('{{ asset('images/image.png') }}') no-repeat center center/cover;
             z-index: -1;
-            mask-image: none; /* Ensures no dark edges */
-            -webkit-mask-image: none; /* Ensures no dark edges */
-            background-color: rgba(0, 0, 0, 0); /* Add a transparent background to avoid white vignette */
         }
         .container {
             position: absolute;
@@ -55,9 +52,11 @@
         }
         .btn {
             display: inline-block;
-            background-color: #616879;
+            background-color: rgba(97, 104, 121, 0.7);
+
+
             color: white;
-            padding: 16px 64px; /* Increased padding for width */
+            padding: 16px 128px; /* Increased padding for width */
             text-decoration: none;
             margin-top: 20px;
             border-radius: 2px; /* Decreased border-radius for sharper edges */
@@ -78,8 +77,6 @@
         }
         p {
             font-size: 14px;
-            font-weight: bold;
-            text-transform: uppercase;
             position: absolute;
             top: 20px;
             left: 20px;
